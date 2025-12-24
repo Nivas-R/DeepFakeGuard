@@ -1,0 +1,9 @@
+torch
+transformers
+tokenizers
+regex
+pdfplumber
+python-docx
+email-validator
+numpy
+tqdm
