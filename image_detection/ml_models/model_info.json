@@ -1,0 +1,29 @@
+{
+  "model_name": "deepfake_detector_FINAL.keras",
+  "file_size_mb": 38.07,
+  "architecture": "EfficientNetB0",
+  "input_shape": [224, 224, 3],
+  "threshold": 0.65,
+  "performance": {
+    "validation_auc": 0.8048,
+    "validation_accuracy": 0.72,
+    "precision": 0.60,
+    "recall": 0.96
+  },
+  "training": {
+    "total_images": 314572,
+    "real_images": 157286,
+    "fake_images": 157286,
+    "platform": "Kaggle (2x Tesla T4)",
+    "training_time_hours": 4
+  },
+  "usage": {
+    "input": "224x224 RGB image",
+    "preprocessing": "Normalize to [0,1] (divide by 255)",
+    "threshold": 0.65,
+    "interpretation": "score > 0.65 = REAL, score < 0.65 = FAKE"
+  },
+  "trained_by": "[Your Name]",
+  "date": "2024-12-10",
+  "download_link": "[Add Google Drive link here]"
+}
