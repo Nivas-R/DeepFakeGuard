@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DeepFakeGuard 2.0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="particleCanvas"></canvas>
+
+<header>
+    <h1>DeepFakeGuard 2.0</h1>
+    <p>Advanced AI System for Detecting Deepfake Audio, Images, Videos & Text</p>
+</header>
+
+<section class="card">
+    <h2>🎧 Audio Detection</h2>
+    <p>Upload .wav or .mp3 files (3 seconds recommended)</p>
+    <input type="file" id="audioFile" accept="audio/*">
+    <button onclick="mockAnalyze('Audio')">Analyze Audio</button>
+</section>
+
+<section class="card">
+    <h2>🖼 Image Detection</h2>
+    <p>Upload image files (.jpg, .png, .jpeg)</p>
+    <input type="file" id="imageFile" accept="image/*">
+    <button onclick="mockAnalyze('Image')">Analyze Image</button>
+</section>
+
+<section class="card">
+    <h2>🎥 Video Detection</h2>
+    <p>Upload video files (.mp4, .mov, .avi)</p>
+    <input type="file" id="videoFile" accept="video/*">
+    <button onclick="mockAnalyze('Video')">Analyze Video</button>
+</section>
+
+<section class="card">
+    <h2>📝 Text / Email Detection</h2>
+    <p>Paste suspicious message or email content</p>
+    <textarea id="textInput" rows="5" placeholder="Enter text here..."></textarea>
+    <button onclick="mockAnalyze('Text')">Analyze Text</button>
+</section>
+
+<section class="result-section hidden" id="resultSection">
+    <div class="circle">
+        <svg>
+            <circle cx="70" cy="70" r="60"></circle>
+            <circle cx="70" cy="70" r="60" id="progressCircle"></circle>
+        </svg>
+        <div class="percentage" id="confidenceText">0%</div>
+    </div>
+    <h2 id="resultText"></h2>
+</section>
+
+<footer>
+    <p>DeepFakeGuard © 2026 | AI Cyber Defense System</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
